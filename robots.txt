@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://za10196coshow.github.io/symphonic-hills/sitemap.xml
