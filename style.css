@@ -11,16 +11,17 @@ a{color:inherit;text-decoration:none}
 .site-header nav a{transition:.25s}
 .site-header nav a:hover{opacity:.55}
 .nav-cta{border-left:1px solid #bcc3bc;padding-left:30px}
-.hero{height:calc(100vh - 96px);min-height:650px;background-image:linear-gradient(90deg,rgba(19,35,30,.63),rgba(19,35,30,.02)),url("./images/hero-golden-hour.png");background-size:cover;background-position:center;position:relative;color:white;display:flex;align-items:center;padding:7vw}
-.hero-copy{max-width:700px}
+.hero{height:calc(100vh - 96px);min-height:650px;background:#17271f;position:relative;color:white;display:flex;align-items:center;padding:7vw;overflow:hidden}
+.hero-film{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,25,19,.78),rgba(12,25,19,.12)),linear-gradient(0deg,rgba(10,21,16,.3),transparent 50%)}
+.hero-copy{max-width:700px;position:relative;z-index:2}
 .eyebrow{font:11px/1.4 Arial,sans-serif;letter-spacing:.28em}
 .eyebrow.dark{color:#6a766e}
 .hero h1,.section h2,.access h2,.contact h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:400}
 .hero h1{font-size:clamp(54px,6.1vw,94px);line-height:1.22;letter-spacing:.06em;margin:26px 0}
 .hero h1 em{font-style:normal;color:#e8ddbf}
 .lead{font-family:"Yu Mincho",serif;font-size:17px;line-height:2;letter-spacing:.12em}
-.text-link{display:inline-flex;align-items:center;gap:70px;border-bottom:1px solid rgba(255,255,255,.55);padding:18px 0;font-size:12px;letter-spacing:.08em;margin-top:30px}
-.hero-note{position:absolute;right:4.5vw;top:42%;display:flex;gap:18px;writing-mode:vertical-rl;font:9px Arial;letter-spacing:.18em}
+.film-meta{position:absolute;z-index:2;right:4.5vw;top:45%;display:flex;gap:24px;writing-mode:vertical-rl;font:8px Arial;letter-spacing:.22em;color:rgba(255,255,255,.72)}
 .scroll{position:absolute;right:4.5vw;bottom:0;font:9px Arial;letter-spacing:.24em;display:flex;flex-direction:column;align-items:center;gap:12px}
 .scroll i{width:1px;height:70px;background:#fff}
 .image-caption{position:absolute;right:24px;bottom:18px;color:rgba(255,255,255,.84);font:8px Arial;letter-spacing:.12em;text-shadow:0 1px 4px #233}
@@ -28,6 +29,14 @@ a{color:inherit;text-decoration:none}
 .section{padding:130px 8vw}
 .section-index{font:12px Arial;color:#738078;letter-spacing:.1em;display:flex;gap:16px;align-items:center}
 .section-index span{font-size:9px;letter-spacing:.25em}
+.ambient-story{position:relative;height:400vh;background:#12241c;color:white}
+.ambient-sticky{position:sticky;top:0;height:100vh;overflow:hidden;background:#1b2c24}
+.ambient-sticky video{width:100%;height:100%;object-fit:cover;display:block}
+.ambient-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,23,17,.58),rgba(10,23,17,.08) 55%,rgba(10,23,17,.32)),linear-gradient(0deg,rgba(8,20,14,.45),transparent 50%)}
+.ambient-line{position:absolute;left:8vw;bottom:0;width:1px;height:80px;background:rgba(255,255,255,.6)}
+.ambient-scenes{position:absolute;inset:0;pointer-events:none}.ambient-scenes article{height:100vh;padding:0 8vw;display:flex;align-items:center}.ambient-scenes article.align-right{justify-content:flex-end;text-align:right}
+.ambient-copy{width:min(560px,70vw);padding:35px 38px;background:rgba(11,27,20,.22);border-left:1px solid rgba(255,255,255,.5);backdrop-filter:blur(4px);text-shadow:0 2px 18px rgba(0,0,0,.35)}.align-right .ambient-copy{border-left:0;border-right:1px solid rgba(255,255,255,.5)}
+.ambient-copy small{font:8px Arial;letter-spacing:.3em;color:#d7ddda}.ambient-copy h2{font:400 clamp(35px,4vw,61px)/1.4 "Yu Mincho",serif;letter-spacing:.1em;margin:15px 0}.ambient-copy p{font:14px/2 "Yu Mincho",serif;letter-spacing:.08em;margin:0;color:#eef1ed}
 .intro{display:grid;grid-template-columns:180px 1fr;gap:30px}
 .intro-copy{max-width:880px}
 .section h2,.access h2,.contact h2{font-size:clamp(42px,5vw,72px);line-height:1.42;letter-spacing:.08em;margin:22px 0 42px}
@@ -65,17 +74,15 @@ a{color:inherit;text-decoration:none}
 .residence-copy dt{width:80px;color:#7a847e}
 .outline-link{border:1px solid #9ca79f;padding:16px 18px;font-size:11px;display:flex;justify-content:space-between;transition:.25s}
 .outline-link:hover{background:var(--ink);color:#fff}
-.access{background:var(--ink);color:#f7f5ec;padding:130px 8vw;display:grid;grid-template-columns:1fr 1fr;gap:8vw}
+.access{background:var(--ink);color:#f7f5ec;padding:130px 7vw;display:grid;grid-template-columns:minmax(300px,.7fr) minmax(620px,1.3fr);gap:6vw;align-items:start}
 .section-index.light{color:#b9c4bc;margin-bottom:70px}
 .access-copy>p{max-width:550px;color:#cbd2cd}
-.route-map{border:1px solid #5b6a62;min-height:570px;position:relative;padding:90px 70px;display:flex;align-items:center}
-.station{position:relative;font:20px "Yu Mincho",serif;white-space:nowrap}
-.station i{width:15px;height:15px;background:var(--gold);border-radius:50%;display:inline-block;margin-right:10px}
-.station span{display:block;font:9px Arial;letter-spacing:.14em;color:#adb8b1;margin:9px 0 0 28px}
-.station.main{font-size:28px}
-.line{height:1px;background:var(--gold);flex:1;margin:0 18px}
-.branch{position:absolute;right:55px;bottom:115px;border-left:1px solid var(--gold);padding-left:24px;display:grid;gap:22px;font:400 16px "Yu Mincho",serif}
-.route-caption{position:absolute;left:70px;bottom:40px;font:8px Arial;letter-spacing:.24em;color:#829087}
+.access-copy>.map-note{font-family:inherit;font-size:9px;line-height:1.8;letter-spacing:.03em;color:#7f8d85;margin-top:32px}
+.route-map{border:1px solid #53635a;background:#1a2d25;padding:38px 38px 25px;box-shadow:0 25px 70px rgba(0,0,0,.2)}
+.map-origin{display:flex;align-items:center;gap:18px;padding:0 0 30px;border-bottom:1px solid #45564d}
+.origin-mark{width:52px;height:52px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font:italic 28px Georgia,serif;color:#e5d5ae}
+.map-origin div{display:flex;flex-direction:column;gap:4px}.map-origin small,.access-method small,.route-station small{font:8px Arial;letter-spacing:.2em;color:#829188}.map-origin strong{font:400 19px "Yu Mincho",serif;letter-spacing:.1em}.map-origin div>span{font-size:9px;color:#8b9a91;letter-spacing:.08em}
+.route-list{display:grid}.route-row{--route-color:#75aa69;display:grid;grid-template-columns:132px 70px 158px 1fr;align-items:center;min-height:132px;border-bottom:1px solid #3b4d44;gap:12px}.blue-route{--route-color:#58a7c6}.purple-route{--route-color:#a789c1}.access-method{display:flex;flex-direction:column;gap:5px}.access-method strong{font:400 14px "Yu Mincho",serif;letter-spacing:.05em}.access-method>span{font-size:8px;line-height:1.5;color:#8c9b92}.route-track{display:flex;align-items:center}.route-track i{width:10px;height:10px;border:2px solid var(--route-color);border-radius:50%}.route-track span{height:2px;background:var(--route-color);flex:1;position:relative}.route-track span:after{content:"";position:absolute;right:-1px;top:-4px;border-left:7px solid var(--route-color);border-top:5px solid transparent;border-bottom:5px solid transparent}.route-station{border-left:3px solid var(--route-color);padding-left:14px;display:flex;flex-direction:column;gap:4px}.route-station strong{font:400 25px "Yu Mincho",serif;letter-spacing:.12em}.route-station em{font-style:normal;font-size:8px;color:var(--route-color);letter-spacing:.06em}.route-destinations{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border:1px solid #41534a;font-size:9px;color:#bdc7c1;white-space:nowrap}.route-destinations b{color:var(--route-color);font-weight:400}.route-legend{display:flex;justify-content:flex-end;gap:18px;padding-top:18px;font-size:8px;color:#718078;letter-spacing:.08em}.route-legend span{display:flex;align-items:center;gap:5px}.route-legend i{width:7px;height:7px;border-radius:50%;display:block}.walk-dot{border:1px solid #75aa69}.bus-dot{background:#58a7c6}
 .contact{text-align:center;padding:140px 8vw;background:var(--cream)}
 .contact h2{margin-bottom:25px}
 .contact>p{font-size:13px}
@@ -90,7 +97,7 @@ footer>span{font:8px Arial;letter-spacing:.12em}
 @media(max-width:900px){.site-header{height:76px}
 .site-header nav a:not(.nav-cta){display:none}
 .hero{height:calc(100vh - 76px);min-height:610px;padding:9vw}
-.hero-note{display:none}
+.film-meta{display:none}
 .section{padding:90px 7vw}
 .intro,.life-story{grid-template-columns:1fr}
 .intro-copy,.section-heading{margin-left:0}
@@ -102,7 +109,7 @@ footer>span{font:8px Arial;letter-spacing:.12em}
 .reverse .residence-image{order:0}
 .residence-copy{padding:55px 7vw}
 .access{grid-template-columns:1fr}
-.route-map{min-height:420px}
+.route-map{margin-top:20px}
 .contact-links{flex-direction:column;align-items:center}
 footer{grid-template-columns:1fr}
 .panorama{height:58vh}
@@ -113,17 +120,15 @@ footer{grid-template-columns:1fr}
 .nav-cta{padding-left:15px;font-size:10px}
 .site-header nav{gap:10px}
 .hero h1{font-size:46px}
+.ambient-scenes article{padding:0 7vw 14vh;align-items:flex-end}.ambient-scenes article.align-right{justify-content:flex-start;text-align:left}.ambient-copy,.align-right .ambient-copy{width:100%;padding:24px 22px;border-right:0;border-left:1px solid rgba(255,255,255,.55);background:rgba(11,27,20,.3)}.ambient-copy h2{font-size:32px}.ambient-copy p{font-size:12px}
 .two-col-text{grid-template-columns:1fr;gap:5px}
 .stat-block{grid-template-columns:1fr}
 .stat-block>div{border-right:0;border-bottom:1px solid #cdd2cc}
 .section h2,.access h2,.contact h2{font-size:38px}
 .panorama{min-height:460px}
 .residence-card{margin-left:-7vw;margin-right:-7vw}
-.route-map{padding:65px 28px}
-.station{font-size:15px}
-.station.main{font-size:21px}
-.branch{right:28px;bottom:80px}
-.route-caption{left:28px}
+.route-map{padding:28px 20px 20px}
+.route-row{grid-template-columns:1fr;gap:12px;padding:24px 0}.route-track{display:none}.access-method{display:grid;grid-template-columns:50px 1fr;align-items:center}.access-method>span{grid-column:2}.route-station{padding:8px 0 8px 14px}.route-destinations{justify-content:flex-start;gap:14px;width:max-content;max-width:100%}.route-legend{justify-content:flex-start;flex-wrap:wrap}
 footer{padding:45px 7vw}
 }
 
@@ -132,3 +137,4 @@ footer{padding:45px 7vw}
 to{opacity:1;transform:none}
 }
 }
+@media(prefers-reduced-motion:reduce){.hero-film{display:none}.hero{background-image:url("./images/film-01-morning.png");background-size:cover}.ambient-story{height:auto}.ambient-sticky{position:absolute;inset:0;height:auto}.ambient-scenes{position:relative}.ambient-scenes article{min-height:75vh}.scroll{display:none}}
