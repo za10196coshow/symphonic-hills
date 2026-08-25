@@ -1,11 +1,17 @@
 {
   "name": "シンフォニックヒルズ",
-  "location": {"value": "神奈川県横浜市都筑区加賀原1丁目24番", "source": "三井住友トラスト不動産", "sourceUrl": "https://library.smtrc.jp/mansion/543296.html", "checkedAt": "2026-08-26", "confidence": "secondary"},
+  "location": {"value": "神奈川県横浜市都筑区加賀原1丁目24番", "source": "三井住友トラスト不動産", "sourceUrl": "https://library.smtrc.jp/mansion/20449.html", "checkedAt": "2026-08-26", "confidence": "secondary"},
   "completed": {"value": "1992–1993", "label": "街区の竣工年", "source": "東急リバブル各マンションライブラリー", "sourceUrl": "https://www.livable.co.jp/mansion/library/M000000023815/", "checkedAt": "2026-08-26", "confidence": "secondary"},
-  "totalUnits": {"value": 580, "approximate": true, "breakdown": "ふれあいの街287戸＋かがやきの街293戸", "source": "住友不動産ステップ各マンションライブラリー", "sourceUrl": "https://www.stepon.co.jp/mansion/library-detail/10809198/", "checkedAt": "2026-08-26", "confidence": "secondary"},
+  "totalUnits": {"value": 580, "approximate": true, "breakdown": "ふれあいの街287戸＋かがやきの街293戸", "source": "三井住友トラスト不動産／東急リバブル", "sourceUrl": "https://library.smtrc.jp/mansion/20449.html", "checkedAt": "2026-08-26", "confidence": "secondary"},
+  "planning": {"value": "中央広場と管理棟を挟む二街区", "background": "旧住宅・都市整備公団と神奈川県住宅供給公社がそれぞれの街区を整備", "source": "東急リバブル", "sourceUrl": "https://www.livable.co.jp/mansion/library/M000000023815/", "checkedAt": "2026-08-26", "confidence": "secondary"},
   "districts": [
     {"name": "ふれあいの街", "units": 287, "completed": "1992年", "source": "東急リバブル", "sourceUrl": "https://www.livable.co.jp/mansion/library/M000000023815/", "confidence": "secondary"},
     {"name": "かがやきの街", "units": 293, "buildings": 9, "completed": "1993年", "source": "東急リバブル／住友不動産ステップ", "sourceUrl": "https://www.livable.co.jp/mansion/library/M000000021350/", "confidence": "secondary"}
   ],
-  "largeUnitExample": {"value": 115.75, "unit": "㎡", "planExamples": ["4LDK", "5LDK"], "note": "2026年に確認できた売出・販売履歴の例。全住戸の仕様ではありません。", "source": "東急リバブル／三井住友トラスト不動産", "sourceUrl": "https://www.livable.co.jp/mansion/C1424XX04/", "checkedAt": "2026-08-26", "confidence": "secondary"}
+  "unitExamples": [
+    {"area": 76.74, "plan": "2LDK", "building": "かがやきの街8号棟", "source": "Woman.CHINTAI", "sourceUrl": "https://woman.chintai/w-C010088760000010830791080001/", "confidence": "reference"},
+    {"area": 79.92, "plan": "4LDK＋屋根裏収納", "building": "ふれあいの街24-6号棟", "source": "ノムコム", "sourceUrl": "https://www.nomu.com/mansion/ensen_kanagawa/2374/2374420/", "confidence": "secondary"},
+    {"area": 115.75, "plan": "4LDK・5LDK", "building": "かがやきの街の公開事例", "source": "東急リバブル", "sourceUrl": "https://www.livable.co.jp/mansion/library/M000000021350/", "confidence": "secondary"}
+  ],
+  "unitExamplesNote": "公開されている売出・賃貸事例。全住戸の正式な面積範囲ではなく、面積・間取り・設備は棟や住戸によって異なる。"
 }

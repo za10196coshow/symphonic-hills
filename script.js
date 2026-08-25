@@ -20,7 +20,7 @@
     document.getElementById('area-comparison').innerHTML = data.areas.map((item) => `<article class="area-card"><strong class="sqm">${esc(item.sqm)}<small>㎡</small></strong><small>${esc(item.label)}</small><div class="room-plan">${item.rooms.map((room) => `<i>${esc(room)}</i>`).join('')}</div></article>`).join('');
   };
   const renderRoutes = (data) => {
-    document.getElementById('access-routes').innerHTML = data.routes.map((route) => `<article class="route-card"><span>${esc(route.mode)}</span><h3>${esc(route.station)}駅</h3><strong>${esc(route.time)}</strong><p>${esc(route.lines)}</p><small>${esc(route.note)}</small><button class="source-trigger" data-url="${esc(route.sourceUrl)}" data-title="${esc(route.source)}" data-level="B">出典を見る</button></article>`).join('');
+    document.getElementById('access-routes').innerHTML = data.routes.map((route) => `<article class="route-card"><span>${esc(route.mode)}</span><h3>${esc(route.station)}駅</h3><strong>${esc(route.time)}</strong><span class="route-use">${esc(route.use)}</span><p>${esc(route.lines)}</p><small>${esc(route.note)}</small><button class="source-trigger" data-url="${esc(route.sourceUrl)}" data-title="${esc(route.source)}" data-level="${route.confidence === 'primary' ? 'A' : 'B'}">出典を見る</button></article>`).join('');
   };
   const renderFacilities = (filter = 'all') => {
     const list = state.facilities.facilities.filter((item) => filter === 'all' || item.category === filter);
@@ -49,10 +49,30 @@
     document.querySelectorAll('[role="tab"]').forEach((button) => button.setAttribute('aria-selected', String(button === tab)));
     renderFacilities(tab.dataset.scene);
   });
+  const hero = document.querySelector('.hero');
   const heroVideo = document.querySelector('.hero-film');
-  if (heroVideo && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const observer = new IntersectionObserver(([entry]) => entry.isIntersecting ? heroVideo.play().catch(() => {}) : heroVideo.pause(), { threshold: .05 });
-    observer.observe(heroVideo);
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (heroVideo) {
+    heroVideo.addEventListener('error', () => { heroVideo.hidden = true; hero.classList.add('video-fallback'); });
+    if (reducedMotion) { heroVideo.pause(); heroVideo.hidden = true; }
+    else if (matchMedia('(max-width: 700px), (pointer: coarse)').matches) {
+      heroVideo.loop = true; heroVideo.muted = true;
+      const observer = new IntersectionObserver(([entry]) => entry.isIntersecting ? heroVideo.play().catch(() => {}) : heroVideo.pause(), { threshold: .05 });
+      observer.observe(hero);
+    } else {
+      heroVideo.pause();
+      let frame = 0;
+      const syncVideo = () => {
+        frame = 0;
+        if (!Number.isFinite(heroVideo.duration) || heroVideo.duration <= 0) return;
+        const progress = Math.min(1, Math.max(0, scrollY / Math.max(1, hero.offsetHeight)));
+        heroVideo.currentTime = progress * Math.max(0, heroVideo.duration - .08);
+      };
+      const requestSync = () => { if (!frame) frame = requestAnimationFrame(syncVideo); };
+      heroVideo.addEventListener('loadedmetadata', syncVideo);
+      addEventListener('scroll', requestSync, { passive: true });
+      addEventListener('resize', requestSync);
+    }
   }
   Promise.all([loadJson('comparisons'), loadJson('access'), loadJson('facilities'), loadJson('sources')])
     .then(([comparisons, access, facilities, sources]) => { state.facilities = facilities; state.sources = sources; renderAreas(comparisons); renderRoutes(access); renderFacilities(); renderSources(sources); })

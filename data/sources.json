@@ -7,11 +7,22 @@
   "items": [
     {"id": "yokohama-school", "level": "A", "title": "横浜市 通学区域規則", "url": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_honbun/g202RG00001166.html"},
     {"id": "yokohama-parks", "level": "A", "title": "横浜市 都筑区公園愛護会一覧", "url": "https://www.city.yokohama.lg.jp/tsuzuki/kurashi/machizukuri_kankyo/jimusho/gesuido/aigokaiitiran.html"},
-    {"id": "lalaport", "level": "A", "title": "三井不動産 ららぽーと横浜 2026年リニューアル資料", "url": "https://www.mitsuifudosan.co.jp/corporate/news/2026/0318/"},
+    {"id": "greenway", "level": "A", "title": "横浜市 ゆうばえのみち再整備説明資料", "url": "https://www.city.yokohama.lg.jp/tsuzuki/kurashi/machizukuri_kankyo/jimusho/gesuido/saiseibi/yubae3orientation.files/0003_20181226.pdf"},
+    {"id": "park-guide", "level": "A", "title": "横浜市 都筑区公園・緑道紹介", "url": "https://www.city.yokohama.lg.jp/tsuzuki/shokai/midokoro/park.html"},
+    {"id": "festival", "level": "A", "title": "横浜市 加賀原ぎんなん公園の納涼大会", "url": "https://www.city.yokohama.lg.jp/tsuzuki/shokai/fuoto/2023/hello_kutyo-0716.html"},
+    {"id": "hazard", "level": "A", "title": "横浜市 都筑区ハザードマップ", "url": "https://www.city.yokohama.lg.jp/bousai-kyukyu-bohan/bousai-saigai/map/shinsui/tuduki.html"},
+    {"id": "lalaport", "level": "A", "title": "ららぽーと横浜公式サイト", "url": "https://mitsui-shopping-park.com/lalaport/yokohama/"},
     {"id": "toho", "level": "A", "title": "TOHOシネマズ ららぽーと横浜", "url": "https://www.tohotheater.jp/theater/036/"},
     {"id": "kagayaki", "level": "B", "title": "東急リバブル かがやきの街", "url": "https://www.livable.co.jp/mansion/library/M000000021350/"},
     {"id": "fureai", "level": "B", "title": "東急リバブル ふれあいの街", "url": "https://www.livable.co.jp/mansion/library/M000000023815/"},
     {"id": "large-unit", "level": "B", "title": "東急リバブル 115.75㎡売出例", "url": "https://www.livable.co.jp/mansion/C1424XX04/"},
+    {"id": "whole", "level": "B", "title": "三井住友トラスト不動産 シンフォニックヒルズ全体概要", "url": "https://library.smtrc.jp/mansion/20449.html"},
+    {"id": "woman-chintai", "level": "B", "title": "Woman.CHINTAI 76.74㎡・2LDK公開事例", "url": "https://woman.chintai/w-C010088760000010830791080001/"},
+    {"id": "nomu", "level": "B", "title": "ノムコム 79.92㎡・4LDK＋屋根裏収納公開事例", "url": "https://www.nomu.com/mansion/ensen_kanagawa/2374/2374420/"},
+    {"id": "suumo", "level": "B", "title": "SUUMO かがやきの街参考情報", "url": "https://suumo.jp/library/tf_14/sc_14118/to_1001296393/"},
+    {"id": "renovation", "level": "B", "title": "株式会社シーエイド 加賀原シンフォニックヒルズ施工例", "url": "https://c-aid-reform.com/case_post/reform%E3%83%BClDK%E3%83%BCrenovation/"},
+    {"id": "community-video", "level": "A", "title": "佐江戸加賀原地区紹介動画", "url": "https://www.youtube.com/watch?v=T77dSMsEQJ0"},
+    {"id": "bath-example", "level": "C", "title": "Instagram ユニットバス交換工事例", "url": "https://www.instagram.com/p/DK07sOTyEu2/?img_index=2", "note": "個別住戸の施工例。全住戸の標準仕様ではない"},
     {"id": "repair", "level": "C", "title": "大規模修繕工事新聞 2015年掲載記事", "url": "https://daikibo.jp.net/archives/4545", "note": "過去工事の参考情報。現在の管理状態を示すものではない"}
   ]
 }
