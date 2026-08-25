@@ -1,9 +1,9 @@
 {
   "positioning": "駅直結型ではなく、徒歩・バス・自動車を組み合わせる郊外型住宅。駅徒歩分数は棟・経路で異なる",
   "routes": [
-    {"station": "川和町", "lines": "横浜市営地下鉄グリーンライン", "mode": "徒歩", "time": "概ね16〜19分の掲載差", "use": "地下鉄利用", "note": "棟・経路・掲載媒体で異なるため一律の徒歩分数ではない", "source": "東急リバブルほか各物件情報", "sourceUrl": "https://www.livable.co.jp/mansion/library/M000000021350/", "checkedAt": "2026-08-26", "confidence": "secondary"},
-    {"station": "中山", "lines": "JR横浜線／横浜市営地下鉄グリーンライン", "mode": "バス", "time": "個別確認", "use": "JR横浜線・地下鉄利用", "note": "乗車時間、停留所、待ち時間は利用時に確認", "source": "三井住友トラスト不動産", "sourceUrl": "https://library.smtrc.jp/mansion/20449.html", "checkedAt": "2026-08-26", "confidence": "secondary"},
-    {"station": "鴨居", "lines": "JR横浜線", "mode": "バス・自動車等", "time": "個別確認", "use": "JR横浜線・ららぽーと横浜方面", "note": "一律の所要時間は表示しない", "source": "ららぽーと横浜公式サイト", "sourceUrl": "https://mitsui-shopping-park.com/lalaport/yokohama/", "checkedAt": "2026-08-26", "confidence": "primary"},
-    {"station": "市が尾", "lines": "東急田園都市線", "mode": "バス", "time": "個別確認", "use": "東急田園都市線利用", "note": "乗車時間、停留所、待ち時間は利用時に確認", "source": "三井住友トラスト不動産", "sourceUrl": "https://library.smtrc.jp/mansion/20449.html", "checkedAt": "2026-08-26", "confidence": "secondary"}
+    {"station": "川和町", "lines": "横浜市営地下鉄グリーンライン", "mode": "徒歩", "time": "徒歩概ね16〜19分", "use": "センター南・北方面へ", "note": "住戸情報により所要時間に幅があります", "source": "東急リバブルほか各物件情報", "sourceUrl": "https://www.livable.co.jp/mansion/library/M000000021350/", "checkedAt": "2026-08-26", "confidence": "secondary"},
+    {"station": "中山", "lines": "JR横浜線／横浜市営地下鉄グリーンライン", "mode": "バス", "time": "バスでアクセス", "use": "JR横浜線と地下鉄を使う日に", "note": "横浜方面やグリーンラインへの乗り換え拠点", "source": "三井住友トラスト不動産", "sourceUrl": "https://library.smtrc.jp/mansion/20449.html", "checkedAt": "2026-08-26", "confidence": "secondary"},
+    {"station": "鴨居", "lines": "JR横浜線", "mode": "バス・自動車", "time": "買い物と合わせて", "use": "JR横浜線・ららぽーと横浜方面へ", "note": "休日の買い物にもつながる生活動線", "source": "ららぽーと横浜公式サイト", "sourceUrl": "https://mitsui-shopping-park.com/lalaport/yokohama/", "checkedAt": "2026-08-26", "confidence": "primary"},
+    {"station": "市が尾", "lines": "東急田園都市線", "mode": "バス", "time": "バスでアクセス", "use": "田園都市線を使う日に", "note": "行き先に合わせて選べるもう一つの駅", "source": "三井住友トラスト不動産", "sourceUrl": "https://library.smtrc.jp/mansion/20449.html", "checkedAt": "2026-08-26", "confidence": "secondary"}
   ]
 }
