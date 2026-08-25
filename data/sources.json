@@ -1,0 +1,17 @@
+{
+  "levels": {
+    "A": {"label": "行政・公式・一次資料", "use": "施設、学区、公園などの客観的事実"},
+    "B": {"label": "不動産会社・ポータル", "use": "住戸、面積、竣工、交通の掲載事例"},
+    "C": {"label": "SNS・口コミ", "use": "雰囲気を知る参考。物件スペックの根拠には使用しない"}
+  },
+  "items": [
+    {"id": "yokohama-school", "level": "A", "title": "横浜市 通学区域規則", "url": "https://cgi.city.yokohama.lg.jp/somu/reiki/reiki_honbun/g202RG00001166.html"},
+    {"id": "yokohama-parks", "level": "A", "title": "横浜市 都筑区公園愛護会一覧", "url": "https://www.city.yokohama.lg.jp/tsuzuki/kurashi/machizukuri_kankyo/jimusho/gesuido/aigokaiitiran.html"},
+    {"id": "lalaport", "level": "A", "title": "三井不動産 ららぽーと横浜 2026年リニューアル資料", "url": "https://www.mitsuifudosan.co.jp/corporate/news/2026/0318/"},
+    {"id": "toho", "level": "A", "title": "TOHOシネマズ ららぽーと横浜", "url": "https://www.tohotheater.jp/theater/036/"},
+    {"id": "kagayaki", "level": "B", "title": "東急リバブル かがやきの街", "url": "https://www.livable.co.jp/mansion/library/M000000021350/"},
+    {"id": "fureai", "level": "B", "title": "東急リバブル ふれあいの街", "url": "https://www.livable.co.jp/mansion/library/M000000023815/"},
+    {"id": "large-unit", "level": "B", "title": "東急リバブル 115.75㎡売出例", "url": "https://www.livable.co.jp/mansion/C1424XX04/"},
+    {"id": "repair", "level": "C", "title": "大規模修繕工事新聞 2015年掲載記事", "url": "https://daikibo.jp.net/archives/4545", "note": "過去工事の参考情報。現在の管理状態を示すものではない"}
+  ]
+}
